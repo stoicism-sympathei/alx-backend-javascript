@@ -1,5 +1,11 @@
 // main.js
 
+import createEmployeesObject from './11-createEmployeesObject.js.js';
+import createReportObject from './12-createReportObject.js';
+import createIteratorObject from './createIteratorObject.js';
+import iterateThroughObject from './101-iterateThroughObject.js.js';
+import returnHowManyArguments from './4-rest-parameter.js';
+
 // Function: createEmployeesObject
 export default function createEmployeesObject(departmentName, employees) {
   const obj = {
