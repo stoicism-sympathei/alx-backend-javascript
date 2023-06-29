@@ -1,6 +1,5 @@
 # 0x02. ES6 classes
 
-![Home page](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/12/817248fb77fb5c2cef3f.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YOUR_CREDENTIALS&X-Amz-Date=YOUR_DATE&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=YOUR_SIGNATURE)
 
 
 ## Resources
