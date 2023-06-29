@@ -1,16 +1,28 @@
 # 0x02. ES6 classes
 
+<div
+    data-container="body"
+    data-placement="right"
+    data-toggle="tooltip"
+    title="My Profile">
+    <a href="/users/my_profile">
+        <div class="image ">
+          <div class="inner" style="background-image: url('https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/101/871/thumb/background-3335422.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230629%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230629T135248Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2e9895a9b48bf806633dc421dd7ba1dec216f4ab4f9f7b174718599541f99e22')"></div>
+        </div>
+
+      <div class="visible-xs">My Profile</div>
+</a>  </div>
 
 ## Resources
 
 **Read or watch**:
 
--   [Classes](https://intranet.hbtn.io/rltoken/uG2JX6kLxDa-51RPA2WGFA "Classes")
--   [Metaprogramming](https://intranet.hbtn.io/rltoken/abF17Z3CueKFyVDHoRyqig "Metaprogramming")
+-   [Classes](https://intranet.alxswe.com/rltoken/ke2dSL31JbpAUBW0qWE9WA "Classes")
+-   [Metaprogramming](https://intranet.alxswe.com/rltoken/6OgF5QGbYclp_cwATfq-0g "Metaprogramming")
 
 ## Learning Objectives
 
-At the end of this project, you are expected to be able to  [explain to anyone](https://intranet.hbtn.io/rltoken/fMhT_0bXe3t37EGLQA6Ccw "explain to anyone"),  **without the help of Google**:
+At the end of this project, you are expected to be able to  [explain to anyone](https://intranet.alxswe.com/rltoken/HZvBl09eHoGwvN8jqlYO-g/ "explain to anyone"),  **without the help of Google**:
 
 -   How to define a Class
 -   How to add methods to a class
