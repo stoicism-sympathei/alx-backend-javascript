@@ -1,6 +1,7 @@
 # 0x02. ES6 classes
 
-![]('https://s3.amazonaws.com/alx-intranet.hbtn.io/users/photos/000/101/871/thumb/background-3335422.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230629%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230629T135248Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=2e9895a9b48bf806633dc421dd7ba1dec216f4ab4f9f7b174718599541f99e22')
+![Home page](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/12/817248fb77fb5c2cef3f.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=YOUR_CREDENTIALS&X-Amz-Date=YOUR_DATE&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=YOUR_SIGNATURE)
+
 
 ## Resources
 
