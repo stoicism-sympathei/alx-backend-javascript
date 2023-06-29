@@ -1,5 +1,6 @@
-# 0x02. ES6 classes
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/12/817248fb77fb5c2cef3f.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210715%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210715T094033Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0c112e1b70f5dd2f3bb2c1e6ab0195650f12b8a57aac8442dd4643773e321023)
+## 0x02. ES6 classes
+![frontpage](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2019/12/817248fb77fb5c2cef3f.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210715%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210715T094033Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0c112e1b70f5dd2f3bb2c1e6ab0195650f12b8a57aac8442dd4643773e321023)
+
 
 ## Resources
 
