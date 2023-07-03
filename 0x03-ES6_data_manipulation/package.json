@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "lint": "./node_modules/.bin/eslint",
+    "lint": "eslint",
     "check-lint": "lint [0-9]*.js",
     "dev": "npx babel-node",
     "test": "jest",
-    "full-test": "./node_modules/.bin/eslint [0-9]*.js && jest"
+    "full-test": "eslint [0-9]*.js && jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.5",
@@ -20,5 +20,13 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "jest": "^24.9.0"
-  }
+  },
+  "name": "0x03-ES6_data_manipulation",
+  "description": "ES6 data manipulation",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "dependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
