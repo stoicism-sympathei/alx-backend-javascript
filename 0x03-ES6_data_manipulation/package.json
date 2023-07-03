@@ -7,9 +7,10 @@
     "full-test": "./node_modules/.bin/eslint [0-9]*.js && jest"
   },
   "devDependencies": {
+    "@babel/cli": "^7.22.5",
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.8.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-env": "^7.22.5",
     "eslint": "^8.44.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
