@@ -1,36 +1,43 @@
 const http = require('http');
-const readStudentsData = require('./3-read_file_async');
-const hostname = '127.0.0.1';
+const countStudents = require('./3-read_file_async');
+
+const host = 'localhost';
 const port = 1245;
 
-const app = http.createServer(async (req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  
-  if (req.url === '/') {
-    res.end('Hello Holberton School!');
-  } else if (req.url === '/students') {
-    try {
-      const studentsData = await readStudentsData(process.argv[2]);
-      const csStudents = studentsData.csStudents.join(', ');
-      const sweStudents = studentsData.sweStudents.join(', ');
+const requestListener = async (req, res) => {
+  switch (req.url) {
+    case '/students':
+      res.writeHead(200);
+      try {
+        const { students, fields } = await countStudents(process.argv[2]);
+        res.write(`Number of students: ${students.length}\n`);
+        for (const student of students) {
+          fields.add(student.field);
+        }
 
-      const response = [
-        'This is the list of our students',
-        `Number of students: ${studentsData.students.length}`,
-        `Number of students in CS: ${csStudents.length}. List: ${csStudents}`,
-        `Number of students in SWE: ${sweStudents.length}. List: ${sweStudents}`
-      ].join('\n');
+        for (const field of fields) {
+          const data = students
+            .filter((s) => s.field === field)
+            .map((s) => s.firstname);
 
-      res.end(response);
-    } catch (error) {
-      res.end(error.message);
-    }
+          res.write(
+            `Number of students in ${field}: ${data.length}. List: ${data.join(
+              ', ',
+            )}\n`,
+          );
+        }
+        res.end();
+      } catch (err) {
+        res.end('Error: Cannot load the database');
+      }
+      break;
+    default:
+      res.writeHead(200);
+      res.end('Hello Holberton School!');
   }
-});
+};
 
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}`);
-});
+const app = http.createServer(requestListener);
+app.listen(port, host);
 
 module.exports = app;
