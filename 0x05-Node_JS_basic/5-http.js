@@ -1,37 +1,32 @@
 const http = require('http');
-const fs = require('fs');
+const students = require('./3-read_file_async');
+const hostname = '127.0.0.1';
+const port = 1245;
 
 const app = http.createServer((req, res) => {
+    res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-
+  
     if (req.url === '/') {
-        res.end('Hello Holberton School!\n');
+        res.end('Hello Holberton School!');
     } else if (req.url === '/students') {
-        // Replace 'students.csv' with the actual CSV file name
-        const csvFileName = 'students.csv';
-        
-        // Replace 'database_name' with the actual database name
-        const dbName = 'database_name';
-        
-        fs.readFile(csvFileName, 'utf-8', (err, data) => {
-            if (err) {
-                res.statusCode = 500;
-                res.end('Internal Server Error');
-            } else {
-                const lines = data.split('\n');
-                const validStudents = lines.filter(line => line.trim() !== '');
-
-                res.end(`This is the list of our students:\n${validStudents.join('\n')}`);
-            }
-        });
+        res.write('This is the list of our students\n');
+        students(process.argv[2])
+            .then((data) => {
+                res.write(`Number of students: ${data.students.length}\n`);
+                res.write(`Number of students in CS: ${data.csStudents.length}. List: ${data.csStudents.join(', ')}\n`);
+                res.write(`Number of students in SWE: ${data.sweStudents.length}. List: ${data.sweStudents.join(', ')}`);
+                res.end();
+            })
+            .catch((err) => res.end(err.message));
     } else {
         res.statusCode = 404;
         res.end('Not Found');
     }
 });
-
-app.listen(1245, () => {
-    console.log('Server is listening on port 1245');
+  
+app.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}`);
 });
 
 module.exports = app;
