@@ -1,19 +1,14 @@
-// full_server/utils.js
-import fs from 'fs';
+const fs = require('fs').promises;
 
-export function readDatabase(filePath) {
-  return new Promise((resolve, reject) => {
-    fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-        reject(err);
-      } else {
-        try {
-          const jsonData = JSON.parse(data);
-          resolve(jsonData);
-        } catch (parseError) {
-          reject(parseError);
-        }
-      }
-    });
-  });
+async function readDatabase(path) {
+    let data;
+    try {
+        data = await fs.readFile(path, 'utf8');
+    } catch (error) {
+        throw new Error('Cannot load the database');
+    }
+    // Parsing logic
+    return parsedData;
 }
+
+module.exports = readDatabase;

@@ -1,10 +1,14 @@
-// full_server/server.js
 import express from 'express';
-import routes from './routes/index.js';
+import indexRouter from './routes/index';
 
 const app = express();
+const port = 1245;
 
-app.use('/', routes);
+app.use('/', indexRouter);
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
 
 export default app;
 
